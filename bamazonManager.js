@@ -218,7 +218,7 @@ function validatePrice(inputValue) {
     if (!isNaN(parseFloat(inputValue)) && isFinite(inputValue)) {
         return true;
     } else {
-        console.log('Please input a valid price.');
+        console.log('\nPlease input a valid price.');
         return false;
     }
 }
