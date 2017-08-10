@@ -1,12 +1,14 @@
 # Bamazon
 
 INSTRUCTIONS
-1. Open terminal (or equivalent) and run:
+1. First run "bamazon.sql" to create a table with dummy data
+
+2. Open terminal (or equivalent) and run:
     ...
     npm install
     ...
 
-Then run the following:
+   Then run the following:
 	...
 	node bamazonCustomer.js
 	...
@@ -15,7 +17,7 @@ Then run the following:
 	node bamazonManager.js
 	...
 
-2. Follow instructions on screen, everything is explained
+3. Follow instructions on screen, everything is explained
 
 FEATURES
 1. The products table have each of the following index values:
@@ -37,7 +39,7 @@ Once the customer has placed the order, your application should check if the sto
 
    * If not, the app should log a phrase like `Insufficient quantity!`, and then prevent the order from going through.
 
-If the store _does_ have enough of the product, it should fulfill the customer's order.
+If the store has enough of the product, it should fulfill the customer's order.
    * The SQL database will update to reflect the remaining quantity.
    * The customer is shown the total cost of their purchase.
 
