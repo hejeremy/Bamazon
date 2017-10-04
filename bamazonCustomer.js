@@ -1,7 +1,7 @@
-var mysql = require("mysql");
-var inquirer = require("inquirer");
+const mysql = require("mysql");
+const inquirer = require("inquirer");
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
@@ -18,7 +18,7 @@ function displayAll() {
     connection.query({
         sql: 'SELECT * FROM products'
     }, function(err, res) {
-        for (var i = 0; i < res.length; i++) {
+        for (let i = 0; i < res.length; i++) {
             console.log("ID: " + res[i].item_id +
                     " || Product: " + res[i].product_name +
                     " || Department: " + res[i].department_name +
@@ -73,7 +73,7 @@ function idSearch() {
             message: 'Input the number you wish to purchase: '
         }])
     .then(function(answer) {
-        var query = "SELECT * FROM products WHERE ?";
+        const query = "SELECT * FROM products WHERE ?";
         connection.query({
             sql: query,
             values: { item_id: answer.item_id }
